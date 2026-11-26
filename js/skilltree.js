@@ -452,6 +452,7 @@ export function renderSkillTree(ctx) {
   </div>` : empty({ title: 'Chưa có cây kỹ năng', description: 'Tạo cây đầu tiên và liên kết kỹ năng với bài học.', icon: 'tree' })}`;
 
   ctx.root.querySelector('[data-new-tree]').addEventListener('click', () => openEditor(ctx, '', undefined, true));
+  if (ctx.params.get('new') === '1') openEditor(ctx, '', undefined, true);
   if (!nodes.length) return;
   const panel = ctx.root.querySelector('.skill-map-panel');
   const map = attachMap(panel.querySelector('.skill-viewport'), panel);

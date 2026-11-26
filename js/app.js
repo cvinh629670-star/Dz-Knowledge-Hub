@@ -1,4 +1,5 @@
 import {initState, readState, updateState} from './database.js';
+import {renderBrainTree} from './braintree.js';
 import {renderDashboard} from './dashboard.js';
 import {dueCount, levelInfo} from './gamification.js';
 import {renderLibrary} from './library.js';
@@ -12,7 +13,7 @@ import {renderSrs} from './srs.js';
 import {empty, esc, icon} from './ui.js';
 
 const pages = {dashboard:renderDashboard,library:renderLibrary,pareto:renderPareto,practice:renderPractice,
-  recall:renderRecall,srs:renderSrs,skilltree:renderSkillTree,settings:renderSettings};
+  recall:renderRecall,srs:renderSrs,skilltree:renderSkillTree,braintree:renderBrainTree,settings:renderSettings};
 const groups = {main:'HỌC TẬP',training:'LUYỆN TẬP',progress:'TIẾN ĐỘ',settings:'HỆ THỐNG'};
 const main = document.querySelector('main');
 const sidebar = document.querySelector('#sidebar');

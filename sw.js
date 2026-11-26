@@ -1,4 +1,4 @@
-const VERSION = 'v4';
+const VERSION = 'v11';
 const scope = new URL(self.registration.scope);
 const PREFIX = 'dz-hub:' + scope.pathname + ':';
 const CACHE = PREFIX + VERSION;
@@ -7,7 +7,7 @@ const FILES = [
   'css/style.css', 'css/components.css', 'css/themes.css', 'css/responsive.css', 'css/library.css',
   'css/study.css', 'css/skilltree.css',
   'js/app.js', 'js/router.js', 'js/ui.js', 'js/database.js', 'js/gamification.js', 'js/dashboard.js',
-  'js/library.js', 'js/pareto.js', 'js/practice.js', 'js/recall.js', 'js/srs.js', 'js/skilltree.js', 'js/settings.js',
+  'js/library.js', 'js/pareto.js', 'js/practice.js', 'js/recall.js', 'js/srs.js', 'js/skilltree.js', 'js/braintree.js', 'js/settings.js',
   'data/subjects.json', 'data/lessons.json', 'data/exercises.json', 'data/flashcards.json',
   'data/skills.json', 'data/achievements.json',
   'assets/backgrounds/grimoire.webp', 'assets/characters/traveler.svg',

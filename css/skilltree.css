@@ -530,3 +530,116 @@
 @media (max-width: 520px) {
   .skill-viewport { height: 350px; }
 }
+.mind-map { background: radial-gradient(ellipse at top, var(--violet-bg), transparent 70%), var(--surface); }
+.mind-help { margin: 0 0 14px; font-size: .85rem; }
+.mind-scroll {
+  overflow: auto;
+  height: clamp(320px, 65vh, 620px);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: radial-gradient(circle, color-mix(in srgb, var(--primary) 22%, transparent) 1px, transparent 1.6px) 0 0 / 20px 20px, var(--bg);
+}
+.mind-toolbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
+.mind-toolbar .mind-help { flex: 1 1 240px; margin: 0; }
+.mind-toolbar output { min-width: 5ch; text-align: center; color: var(--muted); }
+.mind-world { position: relative; overflow: hidden; }
+.mind-diagram {
+  position: absolute;
+  inset: 0 auto auto 0;
+  transform-origin: 0 0;
+}
+.mind-node {
+  --mind-accent: var(--primary-text);
+  position: absolute;
+  translate: -50% -50%;
+  display: grid;
+  place-items: center;
+  width: 116px;
+  height: 116px;
+  padding: 17px 13px;
+  border: 1px solid color-mix(in srgb, var(--mind-accent) 62%, var(--line));
+  border-radius: 50%;
+  background: radial-gradient(circle at 36% 22%, color-mix(in srgb, var(--mind-accent) 21%, var(--surface-2)), var(--surface-2) 72%);
+  box-shadow: 0 5px 14px var(--shadow-color, #08081933), inset 0 0 14px color-mix(in srgb, var(--mind-accent) 14%, transparent);
+  color: var(--text);
+  font-weight: 650;
+  font-size: .82rem;
+  line-height: 1.2;
+  text-align: center;
+  overflow-wrap: anywhere;
+  user-select: none;
+  touch-action: none;
+  cursor: grab;
+}
+.mind-node[data-tier="1"] { --mind-accent: var(--blue); }
+.mind-node[data-tier="2"] { --mind-accent: var(--green); }
+.mind-node[data-tier]::before, .mind-node[data-tier]::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+.mind-node[data-tier]::before {
+  inset: 6px;
+  border: 1px dashed color-mix(in srgb, var(--mind-accent) 45%, transparent);
+  border-radius: 50%;
+}
+.mind-node[data-tier]::after {
+  width: 6px;
+  height: 6px;
+  top: 4px;
+  left: calc(50% - 3px);
+  rotate: 45deg;
+  color: var(--mind-accent);
+  background: currentColor;
+  box-shadow: 72px 72px 0 currentColor, 0 0 8px currentColor;
+}
+.mind-root {
+  width: 146px;
+  height: 128px;
+  color: var(--primary-text);
+  font-size: 1rem;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+.mind-brain-art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 0 9px color-mix(in srgb, var(--primary) 35%, transparent));
+}
+.mind-brain-shape {
+  fill: var(--violet-bg);
+  stroke: var(--primary);
+  stroke-width: 2;
+}
+.mind-brain-folds {
+  fill: none;
+  stroke: var(--primary-text);
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  opacity: .58;
+}
+.mind-node > span {
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  max-width: 100%;
+}
+.mind-node.is-dragging { opacity: .55; cursor: grabbing; }
+.mind-ghost { position: fixed; z-index: 40; translate: -50% -50%; pointer-events: none; box-shadow: 0 8px 22px #05041050; }
+.mind-node.is-removing { background: var(--rose-bg); color: var(--rose); border-color: var(--rose); box-shadow: 0 0 20px color-mix(in srgb, var(--rose) 40%, transparent); }
+.mind-node.is-removing[data-tier] { --mind-accent: var(--rose); }
+.mind-wires { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.mind-wires path {
+  fill: none;
+  stroke: var(--primary-text);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 5 6 1 6;
+  opacity: .72;
+}

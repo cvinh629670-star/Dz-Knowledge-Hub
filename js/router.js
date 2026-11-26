@@ -6,6 +6,7 @@ export const routes = [
   {id:'recall', label:'Active Recall', icon:'brain', group:'training'},
   {id:'srs', label:'Ôn tập Flashcard', icon:'cards', group:'training'},
   {id:'skilltree', label:'Cây kỹ năng', icon:'tree', group:'progress'},
+  {id:'braintree', label:'Cây bộ não', icon:'brain', group:'progress'},
   {id:'settings', label:'Cài đặt & dữ liệu', icon:'settings', group:'settings'}
 ];
 

@@ -188,6 +188,17 @@ export function validateState(state) {
     assert(references(skill.prerequisiteIds, skills) && new Set(skill.prerequisiteIds).size === skill.prerequisiteIds.length, 'kỹ năng tiên quyết');
   }
   assertAcyclic(state.skills);
+  const coordinate = value => finite(value) && value >= 70 && value <= 100000;
+  const positioned = node => coordinate(node.x) && coordinate(node.y);
+  assert(state.brainOrigin === undefined || (object(state.brainOrigin) && positioned(state.brainOrigin)), 'vị trí gốc của Cây bộ não');
+  if (state.brainNodes !== undefined) {
+    assert(Array.isArray(state.brainNodes) && state.brainNodes.length <= 250, 'Cây bộ não');
+    const nodes = list(state, 'brainNodes', node => filled(node.title) && node.title.length <= 80 &&
+      text(node.parentId) && text(node.branch) && node.branch.length <= 80 &&
+      ((node.x === undefined && node.y === undefined) || positioned(node)));
+    assert(state.brainNodes.every(node => !node.parentId || nodes.has(node.parentId)), 'nút cha của Cây bộ não');
+    assertAcyclic(state.brainNodes.map(node => ({id:node.id, prerequisiteIds:node.parentId ? [node.parentId] : []})));
+  }
   list(state, 'achievements', item => filled(item.title) && text(item.description));
   assert(object(state.profile) && filled(state.profile.name) && state.profile.name.length <= 40 &&
     text(state.profile.goal) && state.profile.goal.length <= 180 &&
