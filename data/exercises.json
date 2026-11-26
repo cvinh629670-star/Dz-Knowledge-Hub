@@ -1,0 +1,190 @@
+[
+  {
+    "id": "basics-input",
+    "lessonId": "python-basics",
+    "type": "choice",
+    "difficulty": "beginner",
+    "prompt": "Kiểu của giá trị trả về từ input() là gì?",
+    "answer": "str",
+    "hint": "Hãy nghĩ đến cách bàn phím gửi ký tự.",
+    "solution": "Chọn str. Gọi int() hoặc float() để chuyển khi cần một giá trị số.",
+    "explanation": "Người dùng có thể gõ chữ số nhưng input() vẫn trả về văn bản.",
+    "sample": true,
+    "options": [
+      "int",
+      "str",
+      "float",
+      "bool"
+    ]
+  },
+  {
+    "id": "basics-order",
+    "lessonId": "python-basics",
+    "type": "true-false",
+    "difficulty": "easy",
+    "prompt": "Nếu hai điều kiện trong cùng chuỗi if / elif đều đúng, Python chạy cả hai nhánh.",
+    "answer": "Sai",
+    "hint": "Tìm nhánh đúng đầu tiên.",
+    "solution": "Chọn Sai. Python chạy nhánh đúng đầu tiên trong chuỗi if / elif / else.",
+    "explanation": "Hai câu lệnh if độc lập có thể cùng chạy. Elif thuộc về chuỗi rẽ nhánh trước đó.",
+    "sample": true
+  },
+  {
+    "id": "basics-equality",
+    "lessonId": "python-basics",
+    "type": "fill",
+    "difficulty": "beginner",
+    "prompt": "Điền toán tử vào điều kiện để kiểm tra x có bằng 5 không.\nif x ___ 5:",
+    "answer": "==",
+    "hint": "Toán tử này có hai ký tự giống nhau.",
+    "solution": "Viết if x == 5:.",
+    "explanation": "Một dấu = để gán, còn == để so sánh.",
+    "sample": true
+  },
+  {
+    "id": "basics-average",
+    "lessonId": "python-basics",
+    "type": "calculation",
+    "difficulty": "easy",
+    "prompt": "Một bài kiểm tra có hai phần được 7,5 và 9,0 điểm, trọng số bằng nhau. Tính điểm trung bình.",
+    "answer": "8.25",
+    "hint": "Cộng hai điểm rồi chia cho số phần.",
+    "solution": "(7,5 + 9,0) / 2 = 8,25.",
+    "explanation": "Tổng 16,5 cần được chia cho 2.",
+    "sample": true,
+    "tolerance": 0.001
+  },
+  {
+    "id": "collections-set",
+    "lessonId": "python-collections",
+    "type": "choice",
+    "difficulty": "easy",
+    "prompt": "Bạn chỉ cần đếm số email khác nhau trong một danh sách. Kiểu tập hợp nào hỗ trợ bỏ trùng trực tiếp?",
+    "answer": "set",
+    "hint": "Ưu tiên cấu trúc có phần tử duy nhất.",
+    "solution": "Dùng len(set(emails)). Set gộp những địa chỉ giống hệt nhau.",
+    "explanation": "List giữ phần tử lặp. Dict có khóa duy nhất nhưng cần thêm một ánh xạ không sử dụng trong bài này.",
+    "sample": true,
+    "options": [
+      "dict",
+      "tuple",
+      "list",
+      "set"
+    ]
+  },
+  {
+    "id": "collections-iteration",
+    "lessonId": "python-collections",
+    "type": "calculation",
+    "difficulty": "normal",
+    "prompt": "Cho numbers = [3, 4, 4, 7, 9]. Hãy cộng các số lẻ và nhập tổng.",
+    "answer": "19",
+    "hint": "Số lẻ có phần dư 1 khi chia cho 2.",
+    "solution": "Các số lẻ là 3, 7 và 9. Tổng là 19.",
+    "explanation": "Hai số 4 không thỏa điều kiện n % 2 == 1.",
+    "sample": true,
+    "tolerance": 0
+  },
+  {
+    "id": "collections-count",
+    "lessonId": "python-collections",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Viết hàm count_words(words) nhận danh sách từ và trả về một dict lưu tần suất. Kiểm tra với ['a', 'b', 'a'] và [].",
+    "answer": "def count_words(words):\n    counts = {}\n    for word in words:\n        counts[word] = counts.get(word, 0) + 1\n    return counts",
+    "hint": "Duyệt các từ và dùng get để lấy 0 nếu chưa gặp từ.",
+    "solution": "Tạo bộ đếm rỗng, tăng số đếm cho từng từ rồi trả về sau vòng lặp.",
+    "explanation": "Kết quả cần là {'a': 2, 'b': 1} và {}. Return trong vòng lặp làm mất các từ sau.",
+    "sample": true
+  },
+  {
+    "id": "collections-stock",
+    "lessonId": "python-collections",
+    "type": "scenario",
+    "difficulty": "hard",
+    "prompt": "Kho có 2.000 sản phẩm, cần xem tồn theo mã SKU và tìm những mã bị lặp khi nhập danh sách mới. Chọn cấu trúc cho từng việc và nêu một trường hợp cần kiểm tra.",
+    "answer": "Dùng dict ánh xạ SKU đến số lượng. Khi nhập, duyệt từng SKU với set seen. Nếu SKU đã có trong seen thì ghi nhận bị lặp. Kiểm tra một SKU xuất hiện ba lần và danh sách rỗng.",
+    "hint": "Tra cứu theo khóa và kiểm tra tính duy nhất là hai thao tác khác nhau.",
+    "solution": "Xây dựng ánh xạ từ mã đến lượng tồn; lưu mã đã gặp trong set khi nhập.",
+    "explanation": "Chuyển thẳng danh sách thành set làm mất thông tin mã nào đã bị lặp.",
+    "sample": true
+  },
+  {
+    "id": "functions-return",
+    "lessonId": "python-functions",
+    "type": "true-false",
+    "difficulty": "easy",
+    "prompt": "Một hàm không chạy câu lệnh return nào sẽ trả về None.",
+    "answer": "Đúng",
+    "hint": "Hãy thử gán kết quả của một hàm chỉ in văn bản vào biến.",
+    "solution": "Chọn Đúng. Hàm kết thúc mà không chạy return thì giá trị trả về là None.",
+    "explanation": "Văn bản in ra màn hình không trở thành giá trị của biểu thức gọi hàm.",
+    "sample": true
+  },
+  {
+    "id": "functions-empty",
+    "lessonId": "python-functions",
+    "type": "fill",
+    "difficulty": "normal",
+    "prompt": "Bổ sung từ khóa để hàm gửi kết quả về nơi gọi.\ndef add(a, b):\n    ___ a + b",
+    "answer": "return",
+    "hint": "Từ khóa này cũng kết thúc lần gọi hàm.",
+    "solution": "Viết return a + b.",
+    "explanation": "Print chỉ hiển thị; return gửi giá trị về nơi gọi.",
+    "sample": true
+  },
+  {
+    "id": "functions-design",
+    "lessonId": "python-functions",
+    "type": "essay",
+    "difficulty": "normal",
+    "prompt": "Giải thích vì sao tách việc nhập điểm khỏi hàm average(scores) khiến hàm dễ kiểm thử hơn. Nêu hai đầu vào ví dụ.",
+    "answer": "Hàm nhận danh sách trực tiếp, nên kiểm thử có thể truyền [7, 9] và kiểm tra kết quả 8, rồi truyền [] và kiểm tra kết quả None mà không giả lập nhập bàn phím.",
+    "hint": "Phân biệt đầu vào của hàm với giao diện nhập liệu.",
+    "solution": "Nêu cách truyền dữ liệu trực tiếp và kiểm tra kết quả một ca thường, một ca biên.",
+    "explanation": "Nêu các ví dụ cụ thể để chứng minh bạn đã tách phần giao diện khỏi logic.",
+    "sample": true
+  },
+  {
+    "id": "functions-tiers",
+    "lessonId": "python-functions",
+    "type": "code",
+    "difficulty": "expert",
+    "prompt": "Viết shipping_fee(w) tính phí theo kg. Khối lượng không dương bị từ chối. Phí là 15.000 đến hết 1 kg; 25.000 đến hết 3 kg; trên 3 kg là 40.000. Viết 5 ca kiểm thử quanh ngưỡng.",
+    "answer": "def shipping_fee(w):\n    if w <= 0:\n        raise ValueError('Khối lượng phải dương')\n    if w <= 1:\n        return 15000\n    if w <= 3:\n        return 25000\n    return 40000\n\nassert shipping_fee(1) == 15000\nassert shipping_fee(1.01) == 25000\nassert shipping_fee(3) == 25000\nassert shipping_fee(3.01) == 40000\ntry:\n    shipping_fee(0)\nexcept ValueError:\n    pass\nelse:\n    raise AssertionError('Thiếu kiểm tra khối lượng')",
+    "hint": "Kiểm tra đầu vào trước, rồi đi từ ngưỡng nhỏ đến lớn.",
+    "solution": "Viết điều kiện w <= 0, w <= 1, w <= 3 theo thứ tự. Dùng return ở từng nhánh. Kiểm tra 0, 1, 1,01, 3, 3,01.",
+    "explanation": "Kiểm tra dấu bằng để 1 kg và 3 kg vẫn nhận đúng phí của bậc thấp hơn.",
+    "sample": true
+  },
+  {
+    "id": "oop-self",
+    "lessonId": "python-oop",
+    "type": "choice",
+    "difficulty": "normal",
+    "prompt": "Trong phương thức của đối tượng, self thường trỏ đến đâu?",
+    "answer": "Đối tượng đang nhận lời gọi",
+    "hint": "Xét lời gọi card.review() và giá trị card.",
+    "solution": "Với card.review(), đối tượng card được truyền vào tham số self.",
+    "explanation": "Self trong phương thức đối tượng không tự trỏ đến toàn bộ lớp.",
+    "sample": true,
+    "options": [
+      "Lớp cha",
+      "Đối tượng đang nhận lời gọi",
+      "Đối tượng được tạo đầu tiên",
+      "Giá trị trả về"
+    ]
+  },
+  {
+    "id": "oop-shared",
+    "lessonId": "python-oop",
+    "type": "scenario",
+    "difficulty": "expert",
+    "prompt": "Nhật ký học có nhiều StudySession. Hai phiên vừa tạo chia sẻ một danh sách tags vì lớp khai báo tags = [] ngay trong thân lớp. Làm thế nào để sửa và chứng minh?",
+    "answer": "Gán self.tags = [] bên trong __init__ để mỗi phiên tạo danh sách riêng. Sau đó thêm một nhãn vào phiên a và kiểm tra phiên b vẫn rỗng.",
+    "hint": "Thuộc tính được gán ở thân lớp được chia sẻ nếu phiên không có thuộc tính cùng tên.",
+    "solution": "Chuyển việc khởi tạo vào __init__ rồi kiểm tra hai phiên độc lập.",
+    "explanation": "Chuyển danh sách ra biến toàn cục hoặc dùng một giá trị mặc định [] trong tham số cũng có thể duy trì một đối tượng dùng chung.",
+    "sample": true
+  }
+]

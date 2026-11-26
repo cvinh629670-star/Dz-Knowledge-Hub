@@ -1,0 +1,86 @@
+[
+  {
+    "id": "programming",
+    "name": "Lập trình",
+    "description": "Tư duy thuật toán, lập trình và phát triển phần mềm.",
+    "icon": "code",
+    "sample": true
+  },
+  {
+    "id": "artificial-intelligence",
+    "name": "Trí tuệ nhân tạo",
+    "description": "Học máy, dữ liệu và cách đánh giá mô hình.",
+    "icon": "brain",
+    "sample": true
+  },
+  {
+    "id": "mathematics",
+    "name": "Toán học",
+    "description": "Đại số, xác suất, thống kê và giải tích.",
+    "icon": "target",
+    "sample": true
+  },
+  {
+    "id": "finance",
+    "name": "Tài chính",
+    "description": "Quản lý tiền, đầu tư và phân tích tài chính.",
+    "icon": "chart",
+    "sample": true
+  },
+  {
+    "id": "business",
+    "name": "Kinh doanh",
+    "description": "Thị trường, sản phẩm và vận hành.",
+    "icon": "layers",
+    "sample": true
+  },
+  {
+    "id": "psychology",
+    "name": "Tâm lý học",
+    "description": "Nhận thức, hành vi và động lực của con người.",
+    "icon": "brain",
+    "sample": true
+  },
+  {
+    "id": "philosophy",
+    "name": "Triết học",
+    "description": "Lập luận, đạo đức và những câu hỏi nền tảng.",
+    "icon": "book",
+    "sample": true
+  },
+  {
+    "id": "art",
+    "name": "Nghệ thuật",
+    "description": "Sáng tác, thẩm mỹ và ngôn ngữ hình ảnh.",
+    "icon": "sparkles",
+    "sample": true
+  },
+  {
+    "id": "science",
+    "name": "Khoa học",
+    "description": "Quan sát, thực nghiệm và các quy luật tự nhiên.",
+    "icon": "flask",
+    "sample": true
+  },
+  {
+    "id": "history",
+    "name": "Lịch sử",
+    "description": "Bối cảnh, tư liệu và những biến chuyển xã hội.",
+    "icon": "clock",
+    "sample": true
+  },
+  {
+    "id": "geography",
+    "name": "Địa lý",
+    "description": "Không gian, môi trường và các cộng đồng.",
+    "icon": "target",
+    "sample": true
+  },
+  {
+    "id": "soft-skills",
+    "name": "Kỹ năng mềm",
+    "description": "Giao tiếp, hợp tác và tự quản lý.",
+    "icon": "user",
+    "sample": true
+  }
+]

@@ -1,0 +1,57 @@
+@media (max-width: 1160px) {
+  :root { --sidebar-width: 222px; }
+  .metric-grid { gap: 10px; }
+  .dashboard-grid { gap: 12px; }
+  .stat-card { padding-inline: 12px; }
+}
+@media (max-width: 980px) {
+  .app-shell { margin-left: 0; }
+  .sidebar { transform: translateX(-105%); transition: transform .2s ease; width: min(275px,84vw); }
+  .sidebar.is-open { transform: translateX(0); box-shadow: 10px 0 45px #08081580; }
+  .menu-toggle { display: inline-flex !important; }
+  .nav-overlay:not([hidden]) { display: block !important; position: fixed; z-index: 14; inset: 0; padding: 0; border: 0; background: #080817a8; }
+  body.nav-is-open { overflow: hidden; }
+}
+@media (max-width: 720px) {
+  .metric-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .dashboard-grid { grid-template-columns: minmax(0,1fr); }
+  .dashboard-date { font-size: 11px; }
+  .goal-panel { grid-template-columns: minmax(0,1fr) auto; }
+  .goal-panel .section-head { grid-column: 1/-1; }
+  .hero { min-height: 236px; background-position: 62% center; }
+  .hero-copy { padding: 24px; }
+  .hero p { max-width: 32ch; }
+  .settings-grid, .workspace-grid { grid-template-columns: minmax(0,1fr); }
+}
+@media (max-width: 480px) {
+  :root { --topbar-height: 60px; }
+  .topbar-inner { padding-inline: 13px; }
+  .topbar-location, .topbar-actions { gap: 6px; }
+  .topbar-brand, .topbar-location > svg, .network-status, .top-profile > svg, .top-profile span:not(.avatar) { display: none; }
+  #footer-network { display: inline; }
+  main { padding: 19px 13px 25px; }
+  .dashboard { gap: 13px; }
+  .dashboard-heading { align-items: flex-start; flex-direction: column; gap: 5px; }
+  .dashboard-heading p { margin: 0; }
+  .dashboard-date { padding: 0; }
+  .hero { min-height: 234px; border-radius: 14px; background-image: linear-gradient(90deg,#171028e8,#17102866 64%,#17102830),url("../assets/backgrounds/grimoire.webp"); }
+  .hero-copy { padding: 20px 16px; }
+  .hero p { max-width: 25ch; }
+  .hero h2 { font-size: clamp(26px,8.5vw,36px); }
+  .hero-kicker { letter-spacing: .04em; }
+  .stat-card { min-height: 119px; }
+  .stat-heading { gap: 5px; font-size: 11px; }
+  .stat-heading .tile-icon { width: 28px; height: 28px; }
+  .stat-heading .tile-icon svg { width: 16px; height: 16px; }
+  .stat-link { width: 14px; }
+  .dashboard-panel { padding: 14px; }
+  .dashboard-section-head p { margin-top: 5px; }
+  .activity-chart text { font-size: 16px; }
+  .page-header { margin-bottom: 16px; }
+  .page-header > div:not(.page-actions) { flex: 1 1 180px; }
+  .page-actions { margin-left: 0; }
+  .form-grid { grid-template-columns: minmax(0,1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}

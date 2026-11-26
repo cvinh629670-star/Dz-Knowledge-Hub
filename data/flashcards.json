@@ -1,0 +1,98 @@
+[
+  {
+    "id": "basics-input-type",
+    "lessonId": "python-basics",
+    "question": "Kiểu dữ liệu mặc định của input() là gì?",
+    "answer": "Chuỗi str. Chuyển bằng int() hoặc float() khi cần số.",
+    "example": "float(input(\"Nhập điểm: \"))",
+    "sample": true
+  },
+  {
+    "id": "basics-compare",
+    "lessonId": "python-basics",
+    "question": "Toán tử = và == khác nhau thế nào?",
+    "answer": "= gán giá trị cho tên, == so sánh hai giá trị.",
+    "example": "x = 3 gán giá trị; x == 3 kiểm tra và trả về True.",
+    "sample": true
+  },
+  {
+    "id": "basics-first-branch",
+    "lessonId": "python-basics",
+    "question": "Tại sao nên kiểm tra score >= 8 trước score >= 5 trong chuỗi if / elif?",
+    "answer": "Với các ngưỡng lồng nhau, nhánh rộng hơn chạy trước sẽ chặn nhánh hẹp hơn.",
+    "example": "Điểm 9 thỏa cả hai. Đặt >= 8 lên trước để in “Tốt”.",
+    "sample": true
+  },
+  {
+    "id": "collections-dict-default",
+    "lessonId": "python-collections",
+    "question": "dict.get(key, 0) trả về gì khi key vắng mặt?",
+    "answer": "Giá trị mặc định 0. Từ điển vẫn giữ nguyên.",
+    "example": "counts.get('mèo', 0) + 1 cho 1 ở lần xuất hiện đầu.",
+    "sample": true
+  },
+  {
+    "id": "collections-distinct",
+    "lessonId": "python-collections",
+    "question": "Khi nào chọn set thay cho list?",
+    "answer": "Khi cần lưu giá trị duy nhất hoặc cần kiểm tra một giá trị đã xuất hiện.",
+    "example": "set([3, 3, 5]) có hai phần tử là 3 và 5.",
+    "sample": true
+  },
+  {
+    "id": "collections-list-index",
+    "lessonId": "python-collections",
+    "question": "Chỉ số phần tử đầu tiên của list là bao nhiêu?",
+    "answer": "Chỉ số 0. Chỉ số -1 lấy phần tử cuối của một list không rỗng.",
+    "example": "['a', 'b'][0] cho 'a'.",
+    "sample": true
+  },
+  {
+    "id": "functions-print-return",
+    "lessonId": "python-functions",
+    "question": "Phân biệt print() và return trong một hàm.",
+    "answer": "print() hiển thị. return gửi giá trị về nơi gọi và kết thúc hàm.",
+    "example": "result = average([8, 10]) nhận 9 nếu hàm return 9.",
+    "sample": true
+  },
+  {
+    "id": "functions-test",
+    "lessonId": "python-functions",
+    "question": "Bạn sẽ thử ca biên nào cho hàm tính trung bình danh sách?",
+    "answer": "Danh sách rỗng. Hàm cần hành vi đã xác định để tránh chia cho 0.",
+    "example": "assert average([]) is None",
+    "sample": true
+  },
+  {
+    "id": "functions-parameters",
+    "lessonId": "python-functions",
+    "question": "Tham số và đối số khác nhau thế nào?",
+    "answer": "Tham số xuất hiện trong định nghĩa hàm. Đối số là giá trị hoặc biểu thức dùng lúc gọi hàm.",
+    "example": "def square(x) khai báo tham số x. square(4) truyền đối số 4.",
+    "sample": true
+  },
+  {
+    "id": "oop-instance",
+    "lessonId": "python-oop",
+    "question": "Class và instance khác nhau thế nào?",
+    "answer": "Class định nghĩa kiểu. Instance là một đối tượng cụ thể của kiểu đó.",
+    "example": "StudyCard là class; StudyCard('List là gì?') tạo một instance.",
+    "sample": true
+  },
+  {
+    "id": "oop-current-object",
+    "lessonId": "python-oop",
+    "question": "self trong phương thức đối tượng quy chiếu đến đâu?",
+    "answer": "Đối tượng đang nhận lời gọi phương thức.",
+    "example": "card.review() gọi review với self là card.",
+    "sample": true
+  },
+  {
+    "id": "oop-instance-data",
+    "lessonId": "python-oop",
+    "question": "Nên khởi tạo danh sách riêng cho mỗi đối tượng ở đâu?",
+    "answer": "Gán self.<tên> = [] bên trong __init__.",
+    "example": "self.tags = [] tạo danh sách mới cho mỗi StudySession.",
+    "sample": true
+  }
+]

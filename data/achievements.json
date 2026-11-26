@@ -1,0 +1,51 @@
+[
+  {
+    "id": "first-step",
+    "title": "First Step",
+    "description": "Hoàn thành bài học đầu tiên.",
+    "metric": "lessonsCompleted",
+    "threshold": 1
+  },
+  {
+    "id": "bookworm",
+    "title": "Bookworm",
+    "description": "Hoàn thành 100 bài học.",
+    "metric": "lessonsCompleted",
+    "threshold": 100
+  },
+  {
+    "id": "memory-master",
+    "title": "Memory Master",
+    "description": "Ôn tập 1.000 flashcard.",
+    "metric": "cardsReviewed",
+    "threshold": 1000
+  },
+  {
+    "id": "problem-solver",
+    "title": "Problem Solver",
+    "description": "Giải đúng 500 bài tập.",
+    "metric": "exercisesSolved",
+    "threshold": 500
+  },
+  {
+    "id": "deep-thinker",
+    "title": "Deep Thinker",
+    "description": "Hoàn thành 100 phiên Feynman.",
+    "metric": "feynmanCompleted",
+    "threshold": 100
+  },
+  {
+    "id": "creator",
+    "title": "Creator",
+    "description": "Hoàn thành 10 dự án.",
+    "metric": "projectsCompleted",
+    "threshold": 10
+  },
+  {
+    "id": "eternal-scholar",
+    "title": "Eternal Scholar",
+    "description": "Học liên tiếp 365 ngày.",
+    "metric": "longestStreak",
+    "threshold": 365
+  }
+]

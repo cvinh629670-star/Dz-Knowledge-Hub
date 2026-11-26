@@ -1,0 +1,139 @@
+[
+  {
+    "id": "python-basics",
+    "chapter": "01 · Nền tảng",
+    "title": "Biến và điều kiện trong Python",
+    "knowledge": "Kiểu dữ liệu, phép so sánh và rẽ nhánh",
+    "summary": "Đọc dữ liệu, chuyển kiểu và dùng if để ra quyết định.",
+    "minutes": 15,
+    "tags": [
+      "Python",
+      "Nền tảng",
+      "Điều kiện"
+    ],
+    "sections": {
+      "objective": "Sau bài này, bạn có thể chuyển dữ liệu nhập thành số và dùng điều kiện để phân loại kết quả.",
+      "core": "- `input()` trả về chuỗi. Dùng `int()` hoặc `float()` nếu cần tính toán.\n- `=` gán giá trị. `==` so sánh hai giá trị.\n- Python chạy nhánh đầu tiên có điều kiện đúng trong chuỗi `if` / `elif` / `else`.",
+      "simple": "Biến là một tên mà bạn dùng để gọi lại giá trị. Câu lệnh `if` kiểm tra điều kiện trước khi quyết định làm gì tiếp theo, như khi bạn kiểm tra điểm để phân loại bài kiểm tra.",
+      "formulas": "Điểm trung bình của hai giá trị: $m = (a+b)/2$. Trong Python, viết `(a + b) / 2`.",
+      "examples": "```python\nscore = float(input(\"Nhập điểm: \"))\nif score >= 8:\n    print(\"Tốt\")\nelif score >= 5:\n    print(\"Đạt\")\nelse:\n    print(\"Cần luyện thêm\")\n```",
+      "method": "1. Xác định đầu vào và kiểu dữ liệu.\n2. Viết các nhánh sao cho điều kiện hẹp hơn được kiểm tra trước.\n3. Thử một giá trị ở mỗi nhánh và ngay tại các mốc.",
+      "mistakes": "- So sánh chuỗi nhập trực tiếp với số.\n- Kiểm tra `score >= 5` trước `score >= 8`, khiến nhánh Tốt không chạy.\n- Quên thụt lề phần thân của nhánh.",
+      "summary": "Chuyển kiểu trước khi tính toán, đặt điều kiện chính xác và kiểm tra các mốc biên.",
+      "quiz": "Với điểm đúng bằng 8, chương trình in gì? Vì sao thứ tự các nhánh có ảnh hưởng?",
+      "application": "Viết chương trình phân loại mức phí vận chuyển theo ba ngưỡng khối lượng. Thử hai giá trị đúng bằng ngưỡng."
+    },
+    "relatedIds": [
+      "python-collections",
+      "python-functions"
+    ],
+    "subjectId": "programming",
+    "topic": "Python",
+    "favorite": false,
+    "sample": true,
+    "attachments": []
+  },
+  {
+    "id": "python-collections",
+    "chapter": "02 · Dữ liệu",
+    "title": "Danh sách, từ điển và vòng lặp",
+    "knowledge": "List, dict, set và duyệt dữ liệu",
+    "summary": "Chọn kiểu tập hợp phù hợp và tổng hợp dữ liệu bằng vòng lặp.",
+    "minutes": 22,
+    "tags": [
+      "Python",
+      "Cấu trúc dữ liệu",
+      "Vòng lặp"
+    ],
+    "sections": {
+      "objective": "Chọn được `list`, `dict` hoặc `set` cho một bài toán và đếm tần suất bằng một vòng lặp.",
+      "core": "- `list` lưu dãy phần tử theo thứ tự và truy cập bằng chỉ số.\n- `dict` ghép mỗi khóa với một giá trị.\n- `set` giữ các phần tử duy nhất và hữu ích để kiểm tra có một phần tử hay không.",
+      "simple": "Danh sách giống một hàng ghế có số thứ tự. Từ điển giống danh bạ có tên và số điện thoại. Tập hợp trả lời nhanh câu hỏi một mục đã xuất hiện hay chưa.",
+      "formulas": "Sau mỗi lần gặp một mục, tăng bộ đếm theo $n_{mới} = n_{cũ} + 1$.",
+      "examples": "```python\nwords = [\"mèo\", \"chó\", \"mèo\"]\ncounts = {}\nfor word in words:\n    counts[word] = counts.get(word, 0) + 1\nprint(counts)  # {'mèo': 2, 'chó': 1}\n```",
+      "method": "1. Xác định cần truy cập theo thứ tự, khóa hay tính duy nhất.\n2. Khởi tạo cấu trúc rỗng.\n3. Duyệt đầu vào một lần và cập nhật dữ liệu.",
+      "mistakes": "- Lấy phần tử đầu bằng chỉ số 1 thay vì 0.\n- Dùng truy cập `counts[word]` cho khóa có thể chưa tồn tại.\n- Dựa vào thứ tự duyệt của một `set`.",
+      "summary": "Dùng list cho dãy, dict cho ánh xạ và set cho tính duy nhất.",
+      "quiz": "Tại sao ví dụ dùng `counts.get(word, 0)`? Nếu danh sách trống thì kết quả là gì?",
+      "application": "Đếm số lần mỗi môn học xuất hiện trong thời khóa biểu một tuần rồi tìm môn có nhiều tiết nhất."
+    },
+    "relatedIds": [
+      "python-basics",
+      "python-functions"
+    ],
+    "subjectId": "programming",
+    "topic": "Python",
+    "favorite": false,
+    "sample": true,
+    "attachments": []
+  },
+  {
+    "id": "python-functions",
+    "chapter": "03 · Tổ chức mã",
+    "title": "Hàm và cách tách bài toán",
+    "knowledge": "Tham số, giá trị trả về và kiểm thử hàm",
+    "summary": "Viết hàm ngắn với đầu vào, đầu ra và trường hợp biên rõ ràng.",
+    "minutes": 20,
+    "tags": [
+      "Python",
+      "Hàm",
+      "Kiểm thử"
+    ],
+    "sections": {
+      "objective": "Viết một hàm thực hiện đúng một việc và kiểm tra nó với các đầu vào đại diện.",
+      "core": "- `def` khai báo hàm cùng danh sách tham số.\n- `return` gửi giá trị về nơi gọi và kết thúc hàm.\n- Tách việc nhập và hiển thị khỏi logic tính toán để dễ tái sử dụng và kiểm thử.",
+      "simple": "Một hàm giống một quầy pha chế. Bạn đưa nguyên liệu, quầy làm một việc nhất định và trả lại thành phẩm. Người nhận có thể dùng thành phẩm ở bước tiếp theo.",
+      "formulas": "Nếu có $n$ điểm, điểm trung bình là $\\sum_{i=1}^{n} x_i / n$ với $n > 0$.",
+      "examples": "```python\ndef average(scores):\n    if not scores:\n        return None\n    return sum(scores) / len(scores)\n\nassert average([8, 10]) == 9\nassert average([]) is None\n```",
+      "method": "1. Đặt tên hàm theo việc nó làm.\n2. Chọn đầu vào, kiểu kết quả và hành vi khi thiếu dữ liệu.\n3. Viết thử một ca thông thường và một ca biên trước khi tích hợp.",
+      "mistakes": "- Dùng `print()` khi chương trình gọi còn cần kết quả.\n- Viết hàm dựa vào một biến toàn cục có thể thay đổi.\n- Bỏ qua danh sách trống rồi chia cho 0.",
+      "summary": "Hàm có tham số rõ và giá trị trả về rõ sẽ dễ dùng lại, đọc và kiểm tra.",
+      "quiz": "Nếu bỏ `return` và chỉ gọi `print()`, biến `result = average([8, 10])` nhận gì?",
+      "application": "Viết hàm `shipping_fee(weight)`, thử quanh hai ngưỡng phí và dùng kết quả để tính tổng đơn hàng."
+    },
+    "relatedIds": [
+      "python-basics",
+      "python-collections",
+      "python-oop"
+    ],
+    "subjectId": "programming",
+    "topic": "Python",
+    "favorite": false,
+    "sample": true,
+    "attachments": []
+  },
+  {
+    "id": "python-oop",
+    "chapter": "03 · Tổ chức mã",
+    "title": "Lớp và đối tượng",
+    "knowledge": "Class, instance, self và thiết kế đối tượng",
+    "summary": "Đóng gói dữ liệu và hành vi cho một đối tượng có trạng thái.",
+    "minutes": 24,
+    "tags": [
+      "Python",
+      "OOP",
+      "Class"
+    ],
+    "sections": {
+      "objective": "Tạo lớp có thuộc tính và phương thức, rồi chứng minh hai đối tượng giữ trạng thái riêng.",
+      "core": "- `class` định nghĩa một kiểu đối tượng.\n- `__init__` khởi tạo thuộc tính khi gọi lớp để tạo đối tượng.\n- `self` trỏ đến đối tượng đang nhận lời gọi phương thức.",
+      "simple": "Lớp là mẫu khai báo các trường và thao tác. Mỗi thẻ học tạo từ mẫu là một đối tượng. Khi đánh dấu một thẻ đã ôn, chỉ trạng thái thẻ đó thay đổi.",
+      "formulas": "Mỗi lần ôn, số lượt thay đổi theo $count_{mới} = count_{cũ} + 1$.",
+      "examples": "```python\nclass StudyCard:\n    def __init__(self, question):\n        self.question = question\n        self.review_count = 0\n\n    def review(self):\n        self.review_count += 1\n\nfirst = StudyCard(\"List là gì?\")\nsecond = StudyCard(\"Dict là gì?\")\nfirst.review()\nassert first.review_count == 1\nassert second.review_count == 0\n```",
+      "method": "1. Xác định dữ liệu nào thuộc về từng đối tượng.\n2. Viết `__init__` và một phương thức mà đối tượng cần.\n3. Tạo hai đối tượng và kiểm tra thay đổi trên một đối tượng.",
+      "mistakes": "- Quên `self` khi đọc hoặc ghi thuộc tính của đối tượng.\n- Dùng danh sách có thể sửa làm thuộc tính cấp lớp khi mỗi đối tượng cần danh sách riêng.\n- Tạo lớp cho một phép tính đơn giản khi hàm đã đủ.",
+      "summary": "Một lớp quản lý dữ liệu cùng hành vi. Mỗi đối tượng sở hữu trạng thái của chính nó.",
+      "quiz": "Điều gì thay đổi nếu bạn gọi `second.review()` sau ví dụ? Khi nào nên dùng một hàm thay cho lớp?",
+      "application": "Tạo lớp phiên học có tên chủ đề, thời lượng và phương thức kết thúc. Thử hai phiên khác nhau."
+    },
+    "relatedIds": [
+      "python-functions",
+      "python-collections"
+    ],
+    "subjectId": "programming",
+    "topic": "Python",
+    "favorite": false,
+    "sample": true,
+    "attachments": []
+  }
+]
